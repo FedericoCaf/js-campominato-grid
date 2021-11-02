@@ -30,28 +30,63 @@ buttonPlay.addEventListener('click', function(){
   if(detectChange() === 'Easy'){
 
     for(let i=0; i<100; i++){  
-      let squareEasy = document.createElement('div');
-      squareEasy.className = 'square easy';
-      containerGrid.append(squareEasy);
-    }
+      const squareEasy = createSquare(containerGrid);
+      squareEasy.addEventListener('click', function(){
+      this.classList.add('clicked');
+     })
+  }
   }
  
   if(detectChange() === 'Hard') {
     for(let i=0; i<81; i++){
-      let squareHard = document.createElement('div');
-      squareHard.className = 'square hard';
-      containerGrid.append(squareHard);
+      const squareHard = createSquareHard(containerGrid);
+      squareHard.addEventListener('click', function(){
+      this.classList.add('clicked');
+     })
+       
+      // let squareHard = document.createElement('div');
+      // squareHard.className = 'square hard';
+      // containerGrid.append(squareHard);
     }
   }
   if(detectChange() === 'Crazy') {
     for(let i=0; i<49; i++){
-      let squareCrazy = document.createElement('div');
-      squareCrazy.className = 'square crazy';
-      containerGrid.append(squareCrazy);
+      const squareCrazy = createSquareCrazy(containerGrid);
+      squareCrazy.addEventListener('click', function(){
+      this.classList.add('clicked');
+     })
+      // let squareCrazy = document.createElement('div');
+      // squareCrazy.className = 'square crazy';
+      // containerGrid.append(squareCrazy);
     }
   }
 
 })
+
+// const clickSquare = document.getElementsByClassName('.square');
+// console.log(clickSquare);
+
+
+
+function createSquare(target){
+  let squareEasy = document.createElement('div');
+  squareEasy.className = 'square easy';
+  target.append(squareEasy);
+  return squareEasy;
+}
+function createSquareHard(target){
+  let squareHard = document.createElement('div');
+  squareHard.className = 'square hard';
+  target.append(squareHard);
+  return squareHard;
+}
+function createSquareCrazy(target){
+  let squareCrazy = document.createElement('div');
+  squareCrazy.className = 'square crazy';
+  target.append(squareCrazy);
+  return squareCrazy;
+}
+
 
 function detectChange() {
   let opzioneSelect = document.getElementById("difficolta").value;

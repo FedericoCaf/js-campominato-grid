@@ -15,7 +15,6 @@ main{
 .container-grid{
   width: 500px;
   height: 500px;
-  background-color: antiquewhite;
 }
 
 .square{
@@ -31,13 +30,15 @@ main{
 .square.hard{
   width: calc(500px / 9);
   height: calc(500px / 9);
-
- 
 }
+
 .square.crazy{
   width: calc(500px / 7.001);
   height: calc(500px / 7.001);
+}
 
+.square.clicked{
+  background-color: #6495ED;
 }
 
 footer{
