@@ -19,13 +19,13 @@
       </div>
 
       <div class="container-options d-flex align-items-center">
-        <select id="difficolta">
+        <select id="difficolta" onchange="detectChange()">
           <option value="1">Easy</option>
           <option value="2">Hard</option>
           <option value="3">Crazy</option>
         </select>
 
-        <button>Play</button>
+        <button id="button-play">Play</button>
         
       </div>
     </div>
@@ -33,7 +33,6 @@
 
   <main class="d-flex justify-content-center align-items-center">
     <div class="container-grid d-flex flex-wrap align-content-start">
-      <div class="square"></div>
   
     </div>
   </main>

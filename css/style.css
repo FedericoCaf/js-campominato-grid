@@ -19,9 +19,25 @@ main{
 }
 
 .square{
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.square.easy{
   width: calc(500px / 10);
   height: calc(500px / 10);
-  border: 2px solid black;
+
+}
+.square.hard{
+  width: calc(500px / 9);
+  height: calc(500px / 9);
+
+ 
+}
+.square.crazy{
+  width: calc(500px / 7.001);
+  height: calc(500px / 7.001);
+
 }
 
 footer{
